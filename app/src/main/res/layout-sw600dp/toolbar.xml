@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/side_nav_bar"
+    android:elevation="@dimen/spacing_tiny"
+    app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+    app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    android:id="@+id/toolbar"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
+        android:textSize="@dimen/text_size_medium"
+        android:textColor="@color/white"
+        android:maxLines="1"
+        android:id="@+id/toolbar_title"
+        android:text="@string/app_name"
+        android:padding="@dimen/spacing_tiny"
+        android:visibility="visible"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <AutoCompleteTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_size_medium"
+        android:textColorHint="@color/white"
+        android:textColor="@color/colorWhite"
+        android:maxLines="1"
+        android:id="@+id/toolbar_auto_editText"
+        android:hint="search"
+        android:visibility="gone"
+        android:backgroundTint="@color/white"
+        android:drawableLeft="@mipmap/toolbar_search"
+        android:drawablePadding="@dimen/text_size_medium"
+        android:inputType="text"
+        android:imeOptions="actionSearch"/>
+    </ScrollView>
+</android.support.v7.widget.Toolbar>

@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/searchContainer"
+    android:background="#f4d8dee1">
+
+    <include layout="@layout/toolbar" />
+
+    <ScrollView
+        android:id="@+id/search_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginRight="3dp"
+        android:visibility="visible"
+        android:layout_marginTop="@dimen/margin_xxlarge">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="7dp"
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                android:layout_marginTop="20dp"
+                android:visibility="visible">
+                <EditText
+                    android:padding="10dp"
+                    android:background="@color/colorWhite"
+                    android:hint="Car"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="choice Year"
+                android:textSize="@dimen/margin_medium_3"
+                android:textColor="@color/cardview_dark_background"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp">
+                <Spinner
+                    android:id="@+id/choice_year"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:text="Choice Brand"
+                android:textSize="@dimen/margin_medium_3"
+                android:textColor="@color/cardview_dark_background"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp"
+                >
+                <Spinner
+                    android:id="@+id/choice_brand"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+
+
+
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/search_township"
+                android:text="Choice Model"
+                android:textSize="@dimen/margin_medium_3"
+                android:textColor="@color/cardview_dark_background"/>/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp">
+                <Spinner
+                    android:id="@+id/choice_model"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/search_region"
+                android:text="Choice Engine"
+                android:textSize="@dimen/margin_medium_3"
+                android:textColor="@color/cardview_dark_background"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp">
+                <Spinner
+                    android:id="@+id/choice_engine"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="8dp"
+                android:id="@+id/search_category"
+                android:text="Choice Chassis Code"
+                android:textSize="@dimen/margin_medium_3"
+                android:textColor="@color/cardview_dark_background"/>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="1dp">
+                <Spinner
+                    android:id="@+id/choice_chassis_code"
+                    android:layout_height="48dp"
+                    android:layout_width="match_parent"/>
+            </android.support.v7.widget.CardView>
+            <!--YDN-->
+
+            <!--YDN-->
+            <com.andexert.library.RippleView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ripple_save_vehicle"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginBottom="@dimen/margin_medium_2">
+                <android.support.v7.widget.CardView
+                    android:id="@+id/search_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardUseCompatPadding="true"
+                    app:cardElevation="1dp"
+                    app:cardCornerRadius="@dimen/fab_margin">
+                    <TextView
+                        android:id="@+id/save_vehicle"
+                        android:text="Save Vehicle"
+                        android:padding="10dp"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/btn_selector"/>
+                </android.support.v7.widget.CardView>
+            </com.andexert.library.RippleView>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

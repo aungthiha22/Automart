@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <include layout="@layout/toolbar"/>
+
+    <ScrollView
+        android:id="@+id/detail_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_large">
+
+        <LinearLayout
+            android:id="@+id/main_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:background="@color/colorWhite"
+            android:orientation="vertical">
+
+            <!--<TextView
+                android:id="@+id/product_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:gravity="center"
+                android:padding="@dimen/margin_medium"
+                android:text="title"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/text_size_medium" />-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:padding="@dimen/margin_medium">
+
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/product_detail_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_xxlarge"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Price"
+                    android:textColor="@color/text_background"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:id="@+id/detail_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="150,000 Ks"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_tablet_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_xxlarge"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Brand"
+                    android:textColor="@color/text_background"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:id="@+id/product_detail_brand"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="Toyota"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_tablet_medium" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="55dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_xxlarge"
+                android:orientation="horizontal"
+                android:padding="@dimen/margin_medium">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Availability"
+                    android:textColor="@color/text_background"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:text=":"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/size_tablet_medium" />
+
+                <TextView
+                    android:id="@+id/product_detail_available"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.5"
+                    android:text="In Stock"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/size_tablet_medium" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/product_detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:padding="@dimen/margin_medium"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/bagde_left_margin"
+                android:layout_marginRight="@dimen/bagde_left_margin">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/cardViewAddToCard"
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:cardBackgroundColor="@color/text_background"
+                    app:cardElevation="5dp">
+
+                    <TextView
+                        android:id="@+id/product_detail_addToCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@mipmap/cart"
+                        android:drawablePadding="@dimen/margin_medium"
+                        android:padding="10dp"
+                        android:text="Add to cart"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/size_tablet_medium" />
+                </android.support.v7.widget.CardView>
+
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="@dimen/margin_small"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    app:cardBackgroundColor="@color/text_background"
+                    app:cardElevation="5dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/product_detail_addToFavouriate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:drawableLeft="@drawable/heart"
+                        android:drawablePadding="@dimen/margin_medium"
+                        android:padding="@dimen/margin_small"
+                        android:text="Add to favourite"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_normal" />
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginRight="@dimen/margin_medium_2"
+                android:padding="@dimen/margin_large"
+                app:cardBackgroundColor="@color/dark">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="1dp"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/margin_medium_2">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:text="Choice quantity"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/size_tablet_large" />
+
+                    <ImageView
+                        android:id="@+id/decrease_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginLeft="@dimen/margin_large"
+                        android:src="@mipmap/minus" />
+
+                    <TextView
+                        android:id="@+id/product_detail_quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="@dimen/spacing_tiny"
+                        android:paddingRight="@dimen/spacing_tiny"
+                        android:text="1"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/size_tablet_medium"
+                        android:layout_marginLeft="@dimen/margin_medium"
+                        android:layout_marginRight="@dimen/margin_medium"/>
+
+                    <ImageView
+                        android:id="@+id/increase_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/plus" />
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/product_detail_buyNow_cardView"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="@dimen/margin_medium_2"
+                android:gravity="center"
+                android:padding="@dimen/margin_small"
+                app:cardBackgroundColor="@color/red"
+                app:cardElevation="5dp">
+
+                <TextView
+                    android:id="@+id/product_detail_buyNow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="@dimen/margin_medium"
+                    android:drawableLeft="@drawable/dolor_sing"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:gravity="center"
+                    android:text="BUY NOW"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="@dimen/text_normal" />
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="@dimen/margin_card_medium_2"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginRight="@dimen/margin_card_medium_2"
+                android:background="@color/view_background" />
+
+            <RelativeLayout android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_card_medium_2"
+                android:layout_marginRight="@dimen/margin_card_medium_2"
+                android:background="@color/pager_background">
+
+                <LinearLayout
+                    android:id="@+id/layoutContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/itemCardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardElevation="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/product_detail"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/margin_medium"
+                            android:text="DESCRIPTION"
+                            android:textColor="@color/dark"
+                            android:textSize="@dimen/size_tablet_medium"/>
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@mipmap/right_arrow" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layoutContainer"
+                    android:background="@color/view_background"
+                    android:visibility="visible"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/specification_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_card_medium_2"
+                android:layout_marginRight="@dimen/margin_card_medium_2"
+                android:background="@color/pager_background"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/layoutContainer1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/itemCardView1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        app:cardBackgroundColor="@color/yellow"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/review"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/margin_medium"
+                            android:text="SPECIFICATION"
+                            android:textColor="@color/dark"
+                            android:textSize="@dimen/size_tablet_medium"/>
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@mipmap/right_arrow" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layoutContainer1"
+                    android:background="@color/view_background" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/download_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/pager_background"
+                android:visibility="gone"
+                android:layout_marginLeft="@dimen/margin_card_medium_2"
+                android:layout_marginRight="@dimen/margin_card_medium_2"
+                >
+
+                <LinearLayout
+                    android:id="@+id/layoutContainer2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    android:orientation="horizontal"
+                    android:visibility="visible">
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/itemCardView2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:visibility="visible"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="7dp"
+                        app:cardElevation="@dimen/margin_small">
+
+                        <TextView
+                            android:id="@+id/additional_information"
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorWhite"
+                            android:gravity="center_vertical"
+                            android:padding="@dimen/margin_medium"
+                            android:text="DOWNLOAD INFORMATION"
+                            android:textColor="@color/dark"
+                            android:visibility="visible"
+                            android:textSize="@dimen/size_tablet_medium"/>
+
+                        <ImageView
+                            android:layout_width="33dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="right"
+                            android:padding="5dp"
+                            android:src="@mipmap/right_arrow" />
+                    </android.support.v7.widget.CardView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/layoutContainer2"
+                    android:background="@color/view_background"
+                    android:visibility="visible" />
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_xxlarge"
+                android:gravity="center"
+                android:text="RELATE PRODUCTS"
+                android:textColor="@color/text_background"
+                android:textSize="@dimen/size_tablet_large"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium_2"
+                android:text=""
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/detail_recycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_xxlarge"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

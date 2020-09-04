@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_marginBottom="50dp">
+
+    <include layout="@layout/toolbar"
+        android:visibility="gone"/>
+    <RelativeLayout
+        android:layout_margin="@dimen/margin_small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/add_to_cart_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="2"
+        android:verticalSpacing="@dimen/margin_small"
+        android:horizontalSpacing="@dimen/margin_small"
+        android:layout_marginBottom="60dp"
+        android:background="@color/colorWhite"
+        />
+
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="No Shopping Cart"
+        android:visibility="gone"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/text_size_medium"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/red">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:textSize="@dimen/text_size_medium"
+                android:padding="@dimen/margin_medium"/>
+            <TextView
+                android:id="@+id/txtTotalAmt"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="0 mmk"
+                android:layout_gravity="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="@dimen/text_normal"
+                android:padding="@dimen/margin_medium"/>
+
+            <Button
+                android:id="@+id/add_to_cart_order"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:layout_height="wrap_content"
+                android:text="@string/checkout"
+                tools:ignore="HardcodedText"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/btn_selector"
+                android:layout_marginRight="@dimen/margin_medium"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

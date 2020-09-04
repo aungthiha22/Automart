@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_small"
+        app:cardElevation="@dimen/cardElevation"
+        app:cardCornerRadius="5dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <CheckBox
+                android:id="@+id/add_to_cart_checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/margin_medium"/>
+
+            <ImageView
+                android:id="@+id/add_to_cart_image"
+                android:layout_width="110dp"
+                android:layout_height="130dp"
+                android:layout_margin="@dimen/margin_small"
+                android:layout_gravity="center_vertical"/>
+
+            <LinearLayout
+                android:layout_width="500dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/margin_small"
+                android:paddingBottom="@dimen/margin_medium_3">
+                <TextView
+                    android:id="@+id/add_to_cart_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="YUKO,GL-5 80W-90-20L"
+                    android:textColor="@color/cardview_dark_background"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textSize="@dimen/size_tablet_large"
+                    android:maxLines="1"/>
+
+                <TextView
+                    android:id="@+id/add_to_cart_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="87000  mmk"
+                    android:textColor="@color/dark"
+                    android:padding="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:fontFamily="@font/aileron_regular"
+                    android:textSize="@dimen/size_tablet_large"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/margin_medium">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quantity"
+                        android:textColor="@color/cardview_dark_background"
+                        android:padding="@dimen/margin_small"
+                        android:textSize="@dimen/size_tablet_large"/>
+                    <ImageView
+                        android:id="@+id/decrease_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@mipmap/minus"
+                        android:layout_marginLeft="@dimen/margin_large"/>
+                    <TextView
+                        android:id="@+id/quantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        android:paddingLeft="@dimen/margin_medium_3"
+                        android:paddingRight="@dimen/margin_medium_3"
+                        android:textColor="@color/dark"
+                        android:textSize="@dimen/size_tablet_large"/>
+                    <ImageView
+                        android:id="@+id/increase_image"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:src="@mipmap/plus"/>
+                </LinearLayout>
+            </LinearLayout>
+            <ImageView
+                android:id="@+id/delete_image"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:src="@mipmap/delete"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_xlarge_n"
+                />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

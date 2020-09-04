@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tabs="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <include layout="@layout/search_toolbar"
+        android:visibility="visible"/>
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="vertical"
+        android:layout_marginTop ="60dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/firstPageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="first page"/>
+        <TextView
+            android:id="@+id/lastPageUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="last page"/>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_below="@id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/swipeRefresh"
+        android:layout_marginTop="60dp">
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/product_search_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exact_layout"
+        android:visibility="visible"
+        />
+    </android.support.v4.widget.SwipeRefreshLayout>
+    <TextView
+        android:id="@+id/emptyView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:text="con not load data"
+        android:visibility="gone"/>
+</RelativeLayout>

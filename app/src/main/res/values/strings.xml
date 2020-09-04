@@ -1,0 +1,169 @@
+<resources>
+    <string name="app_name">AutoMart</string>
+    <!--<string name="action_settings">Settings</string>-->
+
+    <string name="action_settings">Settings</string>
+
+    <!--317959792094601-->
+    <!-- <string name="facebook_app_id">317959792094601</string>-->
+    <!--<string name="facebook_app_id">1210191332420406</string> --><!--this is ok-->
+    <string name="facebook_app_id">1014597102073443</string>
+    <string name="fb_login_protocol_scheme">88b18236f1901bb937a1bb31a2541024</string>
+    <string name="client_id">424124414773-e5jib0valihbin6jqlksvh84vi4j6qgv.apps.googleusercontent.com</string>
+    <string name="email_text">Email</string>
+    <!--it is for navigation bar-->
+    <string name="home">HOME</string>
+    <string name="our_partner">OUR PARTNERS</string>
+    <string name="brand">BRAND</string>
+    <string name="about_us">ABOUT AS</string>
+    <string name="contact_us">CONTACT US</string>
+    <string name="store">STORE</string>
+    <string name="new_arrival">Popular Search</string>
+    <string name="promotion_navigation">PROMOTION</string>
+    <string name="logout">LOGOUT</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_search">Search</string>
+    <string name="home_activity_name">Categories</string>
+    <string name="no_data">There is no data, please try again later.</string>
+
+    <!-- Automart title -->
+    <string name="automart_headtitle">AutoMart Online Shopping</string>
+    <string name="automart_description">With our wide selection of vehicles and our highly trained, friendly staff, AutoMart Myanmar is ready to help you find the used car that youv\'e been looking for! Visit us</string>
+
+    <!-- Login screen -->
+    <string name="signup">SignUp</string>
+    <string name="signin">SignIn</string>
+    <string name="et_username">User Name</string>
+    <string name="remember">Remember</string>
+    <string name="forget_password">Forget Password?</string>
+    <string name="connet_accounts">Or Connect With</string>
+    <string name="btn_facebook">CONNECT WITH FACEBOOK</string>
+    <string name="btn_googleplus">CONNECT WITH G-MAIL</string>
+
+    <!-- Navigation drawer -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Automart</string>
+    <string name="nav_header_subtitle">automart.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="menu_home">HOME</string>
+    <string name="menu_new_arrivals">NEW ARRIVALS</string>
+    <string name="menu_about_us">CONTACT US</string>
+    <string name="menu_brand">BRAND</string>
+    <string name="menu_store">STORE</string>
+    <string name="menu_blog">BLOG</string>
+    <string name="menu_promotions">Promotions</string>
+    <string name="menu_contact_us">CONTACT US</string>
+    <string name="menu_rate_app">RATE APP</string>
+    <string name="owner_1">Michael Phelps</string>
+    <string name="owner_2">Vladim Radsk</string>
+    <string name="owner_3">Aung Kyaw</string>
+    <string name="owner_4">Aung Kyaw</string>
+    <string name="ceo">CEO</string>
+    <string name="general_manager">General Manager</string>
+    <string name="marketing_manager">Marketing Manager</string>
+    <string name="sale_manager">Sale Manager</string>
+    <string name="shop_location">Shop Location</string>
+    <string name="category">Category</string>
+    <string name="subCategory">SubCategory</string>
+    <string name="no_internet">No internet connection, Please try again later</string>
+    <string name="to_exit">Please click BACK again to exit</string>
+    <string name="top_sale">Top Sale On This Week</string>
+    <string name="our_top_brand">Our Top Brands</string>
+    <string name="top_arrival">TOP NEW OF WEEK</string>
+    <string name="save_vehicle">Please , Save First Your Vehicle Type</string>
+    <string name="loginFacebookButton">SING IN WITH FACEBOOK</string>
+    <string name="text_myanmar"><![CDATA[ကြၽႏ္ုပ္တို႔AutoMart သည္ ခိုင္မာၿပီး လက္ရွိလုပ္ကိုင္ေနသည့္ ေမာ္ေတာ္ကား spare parts ႏွင့္ စက္ဆီ၊ ေခ်ာဆီျဖန႔္ျဖဴးေရး လုပ္ငန္းကို တိုးခ်ဲ႕၍ အြန္လိုင္းအေရာင္းဆိုင္(AutoMart Online Shop) ကို e-commerce နည္းပညာ၊ လြယ္ကူေသာေငြေပးေခ်မႈႏွင့္ ကြၽမ္းက်င္ေသာ အေရာင္းကိုယ္စားလွယ္မ်ားမွ တိုင္႐ိုက္ဆက္သြယ္ၿပီး ေရာင္းခ်လွ်က္ရွိပါသည္။
+နည္းပညာအက်ိဳးေက်းဇူးေၾကာင့္ရရွိလာေသာ ျဖန႔္ခ်ီေရး ကုန္က်စရိတ္သက္သာမႈကို Online မွဝယ္ယူေသာ customerမ်ားကို ေက်းဇူးတုန႔္ျပန္ေသာအားျဖင့္ Tele sales, Online sales ႏွင့္ Online payment အားလုံးအတြက္ 5%  discount ကိုေပးေနပါၿပီ။]]></string>
+
+    <string name="about_us_1"><![CDATA[<b>Leading Online AutoParts Store in Myanmar</b>
+        <br>AUTOMART was established in 2015 and has become a leading e-commerce auto parts retailer of aftermarket automotive parts of premium quality and value brands such as ZF, Sachs, Lemforder, Bardahl, MANN, YUKO, ATM & Osram. We provide expert service through extensive parts knowledge, fast and friendly delivery, and an expansive inventory.
+        Team AUTOMART organizes with well trained and experienced Sales Engineers, IT Technicians, Digital Marketing and Operation Team, Logistics and Inventory Associates, Admin and Finance Team ,Customer Service Representatives with their unique contributions they bring to the table to serve you better services.]]>
+    </string>
+    <string name="about_us_2"><![CDATA[<b>Simple Shopping Experience</b><br>
+        AUTOMART online catalogue carries famous brands of auto parts, lubricants and additives for vehicles of year 2000 to present, ensuring you’ll find the right parts, at the right time and at an unbeatable price guaranteed. Adding in a secure and easy online and conventional payment, AUTOMART provides a quick and easy shopping journey for Myanmar automotive professionals across the nation.
+        Shopping with AUTOMART provides convenience and affordability that you won't find at your local parts store. You might see the same name-brand automotive products found in local auto parts stores, but at much lower prices. If you check out our large selection of car parts, accessories once, we're sure you will be back every time you have a need for great-quality parts.]]></string>
+
+    <string name="about_us_3"><![CDATA[<b>Quick Shipping Nationwide</b><br>
+        Taking the stress out of your auto parts purchase and getting you back on the road faster, we’ve strategically make your payment process and shipping quick and easy. Our sales and delivery teams are equipped with the latest technology, enabling us to ship hundreds of parcels per day with ease and expertise.]]></string>
+
+    <string name="address_auto"><![CDATA[
+        No:291, Byamaso Road, Quarter(6),
+         <br>South Okapalapa Tsp, Yangon.</br>
+         <br>09 - 2222222222</br>
+         <br>admin@automart.com.mm</br>
+         <br>Mon - Sat 8:30AM To 6:00PM]]></string>
+
+    <string name="partner_desc"><![CDATA[
+    AUTOMART recruits and works with three types of partners.
+
+<br>1. Service Partners, who carry our quality products for auto repair services at their workshops.Some of our partners are-
+
+   <li> PaDaMyar Car Services</li>
+   <li> Alone Car Services & Spa</li>
+   <li> Inya Myine 22</li>
+
+<br>2. Retail Partners, who carry our quality products for resale at their retail shops.
+
+<br>3. Promotion Partners, who work with us for sales and marketing activities, promotion and advertisement.
+
+<br>4. Business Partners, who work with us as strategic partners for business.
+        ]]></string>
+    <string name="order">Order</string>
+    <string name="total">Total</string>
+    <string name="quantity">Quantity</string>
+    <string name="checkout"> Checkout</string>
+    <string name="payment">Payment Method</string>
+    <string name="payment_title">Payment</string>
+    <string name="name">Name</string>
+    <string name="email">E-Mail</string>
+    <string name="create_update">Crated At </string>
+    <string name="last_update">Last Updated</string>
+    <string name="see_my_order">SEE MY ORDER</string>
+    <string name="booking_ref">Booking ref</string>
+    <string name="total_amt">Total amount</string>
+    <string name="payment_status">Payment status</string>
+    <string name="payment_method">PAYMENT METHOD</string>
+    <string name="created">Order Date</string>
+    <string name="shipping_address">Change Shipping Address</string>
+    <string name="phone_number">Phone number for order confirmation</string>
+    <string name="choice_payment">Choose Payment Method</string>
+    <string name="promotion">Promotion</string>
+    <string name="payment_amount">Payment amount</string>
+    <string name="payment_confirm">Are you sure to buy</string>
+    <string name="detail_no">There is no product detail</string>
+    <string name="can_not_load_data">Can not load data</string>
+    <string name="enter_shipping_address">Enter Shipping Address</string>
+    <string name="enter_ph_number">Enter Phone Number</string>
+    <string name="choice_shop_name">Choice Shop Name</string>
+    <string name="bank_transfer">Bank transfer</string>
+    <string name="mpu">MPU</string>
+    <string name="kbz_pay">KBZ pay</string>
+    <string name="wave_pay">Wave pay</string>
+    <string name="credit_sale">Credit sale</string>
+    <string name="cash_on_delivery">Cash on delivery</string>
+    <string name="enter_promo">Enter Dealer/Promo Code</string>
+    <string name="apply">APPLY</string>
+    <string name="waiting">Loading, Please wait&#8230;</string>
+    <string name="logging">Logging In&#8230;</string>
+    <string name="cancel_order">Cancel Order</string>
+    <string name="confirm_cancel_order">Do you want to cancel for Order Reference Number</string>
+    <string-array name="cancel_spanner">
+        <item>Answer Questionnaires for Order Cancelation</item>
+        <item>တစ္ျခားပစၥည္းအမ်ိဳးအစား ေျပာင္းဝယ္ခ်င္လို႔</item>
+        <item>တစ္ျခားေနရာမွာ ေဈးသက္သာတာေတြ႕လို႔</item>
+        <item>စိတ္ေျပာင္းသြားလို႔</item>
+        <item>ေငြေပးေခ်မႈေျပာင္းခ်င္လို႔</item>
+        <item>ပစၥည္းေအေရအတြက္ ထပ္တိုးခ်င္လို႔</item>
+        <item>ေဘာင္ခ်ာခြဲမွာခ်င္လို႔</item>
+        <item>တစ္ျခားပစၥည္းနဲ႔ တြဲမွာမလို႔</item>
+        <item>ပစၥည္းပို႔ခ်ိန္ၾကာလို႔</item>
+        <item>ပစၥည္းပို႔ခမ်ားလို႔</item>
+        <item>ပစၥည္းပို႔မယ့္ရက္ အတိအက် မသိရလို႔</item>
+        <item>လိပ္စာေျပာင္းခ်င္လို႔</item>
+        <item>ကူပြန္ကုတ္ ထည့္ဖို႔ေမ့ခဲ့လို႔</item>
+    </string-array>
+
+
+</resources>

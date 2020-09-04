@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/toolbar"/>
+
+
+    <TextView
+        android:id="@+id/partner_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/our_partner"
+        android:textColor="@color/dark"
+        android:textSize="@dimen/size_tablet_large"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:padding="@dimen/margin_medium"/>
+
+    <TextView
+        android:id="@+id/partner_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_medium"
+        android:textSize="@dimen/size_tablet_medium"/>
+</LinearLayout>

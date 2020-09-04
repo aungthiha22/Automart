@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.MainActivity">
+  <item
+      android:id="@+id/search"
+      android:icon="@drawable/menu_search"
+      android:title="Search"
+      app:showAsAction="always"
+      android:visible="true"
+      />
+  <item
+    android:id="@+id/setting"
+    android:title="@string/action_settings"
+    android:visible="false"/>
+</menu>

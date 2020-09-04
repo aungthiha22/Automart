@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/colorWhite">
+
+    <include layout="@layout/toolbar"/>
+    <android.support.v7.widget.CardView
+        android:id="@+id/blog_cardView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:layout_marginTop="60dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/colorWhite"
+                >
+
+                <ImageView
+                    android:id="@+id/blog_detail_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_gravity="center"
+                    android:background="@color/colorWhite"
+                    android:paddingTop="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <TextView
+                    android:id="@+id/blog_detail_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_small"
+                    android:fontFamily="@font/aileron_regular"
+                    android:textColor="@color/dark"
+                    android:textSize="@dimen/size_tablet_large"
+                    android:maxLines="1"
+                    android:layout_margin="@dimen/margin_medium"/>
+
+                <TextView
+                    android:id="@+id/blog_detail_description"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="@dimen/margin_medium"
+                    android:paddingLeft="@dimen/margin_medium_2"
+                    android:textColor="@color/cardview_dark_background"
+                    android:fontFamily="@font/aileron_regular"
+                    android:textSize="@dimen/size_tablet_medium"/>
+
+                <!-- <View
+                     android:layout_width="match_parent"
+                     android:layout_height="1dp"
+                     android:background="#cacaca"/>-->
+            </LinearLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:title="Home"
+        android:icon="@drawable/home"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/navigation_shopping_card"
+        android:icon="@mipmap/shopping_cart"
+        android:title="Cart"
+        android:visible="true"
+        />
+
+   <item
+        android:id="@+id/navigation_categories"
+        android:title="Brand"
+        android:icon="@mipmap/categories"
+        android:visible="true"
+        />
+     <item
+        android:id="@+id/navigation_search"
+        android:title="Search"
+        android:icon="@mipmap/search"
+        android:visible="true"
+        />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:title="Profile"
+        android:icon="@mipmap/profile"
+        android:visible="true"
+
+        />
+
+</menu>

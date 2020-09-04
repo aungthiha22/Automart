@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.rebook.automart"
+    xmlns:tools="http://schemas.android.com/tools">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.SlideActivity"/>
+        <activity android:name=".ui.LoginActivity"/>
+        <activity android:name=".ui.RegisterActivity"/>
+        <activity android:name=".ui.ForgetPasswordActivity"/>
+        <activity android:name=".ui.AboutAsActivity"/>
+        <activity android:name=".ui.ActivitySearch"/>
+        <!--<activity android:name=".ui.MainActivity"/>-->
+        <activity android:name=".ui.SubCategoryActivity"/>
+        <activity android:name=".ui.ProductDetailActivity"/>
+        <activity android:name=".ui.ProductList"/>
+        <activity android:name=".ui.PromotionActivity"/>
+        <activity android:name=".ui.FitterListView"/>
+        <activity android:name=".ui.ContactUs"/>
+        <activity android:name=".ui.BlogDetailActivity"/>
+        <activity android:name=".ui.OrderListActivity"/>
+        <activity android:name=".ui.UserOrderActivity"/>
+        <activity android:name=".ui.BuyNowActivity"/>
+        <activity android:name=".ui.PromotionAndPayment"/>
+        <activity android:name=".ui.WebViewActivity"/>
+        <activity android:name=".ui.ViewDetailActivity"/>
+        <activity android:name=".ui.SliderWebActivity"/>
+        <activity android:name=".ui.OrderCancelActivity"/>
+        <activity android:name=".ui.SaveVehicle"/>
+        <activity android:name=".ui.OurPartners"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="41242f476fabb52e417ed5f0e8aabeb713e07f94" />
+
+        <meta-data android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCqMMmc5Ldwy0xkkNHmw-ApxDbtaooM1uU"/>
+
+    </application>
+
+</manifest>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="230dp"
+    android:layout_height="250dp"
+    android:background="@drawable/item_drawable"
+    android:layout_margin="3dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_category_cardView"
+        app:cardCornerRadius="10dp"
+        android:layout_margin="1dp"
+        app:cardElevation="@dimen/cardElevation"
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="@dimen/margin_medium">
+            <ImageView
+                android:id="@+id/home_category_item_image"
+                android:layout_width="350dp"
+                android:layout_height="300dp"
+                android:src="@drawable/main_logo"
+                android:layout_centerHorizontal="true"
+               android:paddingBottom="40dp"/>
+            <TextView
+                android:id="@+id/home_category_item_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YUKO"
+                android:padding="@dimen/margin_medium"
+                android:textColor="@color/dark"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/margin_medium"
+                android:textSize="@dimen/size_tablet_large"
+                android:fontFamily="@font/aileron_regular"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>
+
+

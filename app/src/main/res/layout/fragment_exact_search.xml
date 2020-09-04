@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#c7e4e7">
+
+    <LinearLayout
+
+        android:id="@+id/exact_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/margin_large"
+        android:visibility="visible">
+
+        <android.support.v7.widget.CardView
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="wrap_content"
+            android:background="@drawable/box_selector"
+            app:cardCornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:padding="10dp">
+            <EditText
+                android:id="@+id/exact_edit_text"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:hint="Enter Car Name"
+                android:padding="10dp"
+                />
+
+        </android.support.v7.widget.CardView>
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="2"
+            android:layout_height="50dp"
+            android:text="search"
+            android:padding="10dp"
+            android:background="@drawable/btn_googleplus"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/colorWhite"
+            />
+    </LinearLayout>
+    <ListView
+
+        android:id="@+id/search_exact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exact_layout">
+
+    </ListView>
+</RelativeLayout>

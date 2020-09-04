@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#223f92</color>
+    <color name="colorPrimaryDark">#0a3593</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="dark">#0C0C0C</color>
+    <color name="white">#E6E7E7</color>
+    <color name="pager_background">#abcbd7</color>
+    <color name="toast_background1">#383838</color>
+    <color name="toast_background2">#223f92</color>
+    <color name="colorGreyTitle">#212121</color>
+    <color name="colorGreyDescription">#5c5c5c</color>
+    <color name="colorWhite">#FCFCFC</color>
+    <color name="colorFacebook">#1877f1</color>
+    <color name="colorGooglePlus">#d70a11</color>
+    <color name="view_background">#8e8e8f</color>
+    <color name="yellow">#d4b907</color>
+    <color name="green">#0BCE14</color>
+    <color name="red">#ba071c</color>
+    <color name="blue">#202b91</color>
+    <color name="divider_line">#fb1bd2c3</color>
+    <color name="toast_background">#f8404141</color>
+    <color name="text_background">#2b2d72</color>
+    <color name="image_background">#cfcfcf</color>
+    <color name="item_background">#f2dad9d9</color>
+    <color name="transparent_black">#335C5A5A</color>
+
+</resources>
