@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.util.TinyDB;
 
 /**

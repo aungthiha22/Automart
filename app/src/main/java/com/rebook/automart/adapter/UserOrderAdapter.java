@@ -7,20 +7,15 @@ import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rebook.automart.R;
 import com.rebook.automart.model.Data;
-import com.rebook.automart.model.Product;
-import com.rebook.automart.ui.BlogDetailActivity;
-import com.rebook.automart.ui.OrderCancelActivity;
-import com.rebook.automart.ui.UserOrderActivity;
+import com.rebook.automart.activity.OrderCancelActivity;
 
 import java.util.ArrayList;
 import java.util.List;

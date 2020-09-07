@@ -8,13 +8,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.andexert.library.RippleView;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.model.Product;
-import com.rebook.automart.ui.SliderWebActivity;
+import com.rebook.automart.activity.SliderWebActivity;
 import com.rebook.automart.util.Utils;
 import com.squareup.picasso.Picasso;
 

@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;

@@ -1,59 +1,21 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 
-import android.app.ProgressDialog;
-import android.content.ContentValues;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.os.Handler;
-import android.support.annotation.Nullable;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.DefaultItemAnimator;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
-import android.view.Gravity;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import com.andexert.library.RippleView;
-import com.bumptech.glide.Glide;
-import com.daimajia.slider.library.Animations.DescriptionAnimation;
-import com.daimajia.slider.library.SliderLayout;
-import com.daimajia.slider.library.SliderTypes.BaseSliderView;
-import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.adapter.HomeAdapter;
-import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
-import com.rebook.automart.model.DataRespone;
-import com.rebook.automart.model.Product;
-import com.rebook.automart.model.ProductImage;
 import com.rebook.automart.sync.SyncPostService;
-import com.rebook.automart.util.NetService;
 import com.rebook.automart.util.TinyDB;
-import com.rebook.automart.util.Utils;
-import com.rebook.automart.widget.ZgToast;
 import com.squareup.okhttp.CertificatePinner;
 import com.squareup.okhttp.OkHttpClient;
-
-import java.util.ArrayList;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

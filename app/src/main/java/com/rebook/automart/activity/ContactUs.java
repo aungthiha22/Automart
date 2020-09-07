@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -18,7 +18,6 @@ import android.widget.Toast;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.widget.ZgToast;
 import com.squareup.okhttp.OkHttpClient;

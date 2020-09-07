@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,6 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.widget.ZawgyiTextView;
 import org.xml.sax.XMLReader;
 import butterknife.BindView;

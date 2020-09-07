@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +19,6 @@ import android.widget.TextView;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.SubCategoryAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.model.PostAutoMart;
@@ -201,7 +200,7 @@ public class SubCategoryActivity extends AppCompatActivity{
                 finish();
                 return true;
             case R.id.search:
-                startActivity(new Intent(SubCategoryActivity.this,ActivitySearch.class));
+                startActivity(new Intent(SubCategoryActivity.this, ActivitySearch.class));
                 overridePendingTransition(0,0);
                 finish();
             default:

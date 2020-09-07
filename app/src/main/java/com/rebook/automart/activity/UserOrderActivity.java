@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -172,7 +172,7 @@ public class UserOrderActivity extends AppCompatActivity {
                     progressBar.setVisibility(View.GONE);
                     emptyView.setVisibility(View.VISIBLE);
                     recyclerView.setVisibility(View.GONE);
-                    startActivity(new Intent(UserOrderActivity.this,LoginActivity.class));
+                    startActivity(new Intent(UserOrderActivity.this, LoginActivity.class));
                     overridePendingTransition(0,0);
                     finish();
                 }

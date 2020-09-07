@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.fragment;
 
 import android.app.Activity;
 import android.content.ContentValues;
@@ -34,6 +34,10 @@ import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.activity.MainActivity;
+import com.rebook.automart.activity.ProductDetailActivity;
+import com.rebook.automart.activity.SaveVehicle;
+import com.rebook.automart.activity.SliderWebActivity;
+import com.rebook.automart.activity.SubCategoryActivity;
 import com.rebook.automart.adapter.HomeCategoryAdapter;
 import com.rebook.automart.adapter.TestingSlidePagerAdapter;
 import com.rebook.automart.model.Product;
@@ -136,7 +140,7 @@ public class HomeFragment extends Fragment {
         selectVehicle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),SaveVehicle.class);
+                Intent intent = new Intent(getActivity(), SaveVehicle.class);
                 intent.putExtra("search","no");
                 startActivity(intent);
                 getActivity().finish();
@@ -307,7 +311,7 @@ public class HomeFragment extends Fragment {
         adsImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(),SliderWebActivity.class);
+                Intent intent = new Intent(getActivity(), SliderWebActivity.class);
                 intent.putExtra("web_url",goAdsUrl4);
                 intent.putExtra("web_name",getString(R.string.app_name));
                 startActivity(intent);
@@ -669,7 +673,7 @@ public class HomeFragment extends Fragment {
                         Log.e("HomeFragment ","sub category id __________\t"+newArrival.get(position).getSubCategoryId());
                         Log.e("HomeFragment ","id __________\t"+newArrival.get(position).getId());
 
-                        Intent intent = new Intent(context,ProductDetailActivity.class);
+                        Intent intent = new Intent(context, ProductDetailActivity.class);
                         intent.putExtra(SubCategoryActivity.CATEGORY_ID,newArrival.get(position).getId());
                         intent.putExtra(SubCategoryActivity.SUB_CATEGORY_ID,newArrival.get(position).getSubCategoryId());
                         startActivity(intent);

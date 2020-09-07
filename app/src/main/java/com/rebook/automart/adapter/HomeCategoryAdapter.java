@@ -10,18 +10,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.model.Product;
-import com.rebook.automart.ui.ProductList;
+import com.rebook.automart.activity.ProductList;
 import com.rebook.automart.util.Utils;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 

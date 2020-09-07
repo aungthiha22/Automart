@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -22,7 +22,6 @@ import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.PostAutoMart;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.NetService;

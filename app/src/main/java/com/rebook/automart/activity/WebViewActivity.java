@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -15,7 +15,6 @@ import android.webkit.WebView;
 import android.widget.TextView;
 
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

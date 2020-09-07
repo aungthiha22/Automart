@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -24,7 +24,6 @@ import android.widget.TextView;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.NetService;
@@ -126,7 +125,7 @@ public class ActivitySearch extends AppCompatActivity {
                     zgToast.setZgText(getResources().getString(R.string.save_vehicle));
                     zgToast.setError();
                     zgToast.show();
-                    Intent intent = new Intent(ActivitySearch.this,SaveVehicle.class);
+                    Intent intent = new Intent(ActivitySearch.this, SaveVehicle.class);
                     intent.putExtra("search","yes");
                     startActivity(intent);
                     finish();
@@ -231,7 +230,7 @@ public class ActivitySearch extends AppCompatActivity {
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if (actionId == EditorInfo.IME_ACTION_SEARCH){
                     titleChoice = autoCompleteTextView.getText().toString();
-                    Intent intent = new Intent(ActivitySearch.this,FitterListView.class);
+                    Intent intent = new Intent(ActivitySearch.this, FitterListView.class);
                     intent.putExtra(SEARCH_TEXT,titleChoice);
                     overridePendingTransition(0,0);
                     startActivity(intent);

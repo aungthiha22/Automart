@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.annotation.TargetApi;
 import android.app.ProgressDialog;
@@ -35,7 +35,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.HomeAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.model.Product;
@@ -433,7 +432,7 @@ public class ProductDetailActivity extends AppCompatActivity {
                 orderQuantity = Integer.parseInt(txtQuantity.getText().toString());
                 Log.e("ProductDetail","order quantity\t"+String.valueOf(orderQuantity));
 
-                Intent intent = new Intent(ProductDetailActivity.this,BuyNowActivity.class);
+                Intent intent = new Intent(ProductDetailActivity.this, BuyNowActivity.class);
 
                 intent.putExtra("id",productDetailId);
                 intent.putExtra("imageUrl",tableImageUrl);
@@ -450,7 +449,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ProductDetailActivity.this,ViewDetailActivity.class);
+                Intent intent = new Intent(ProductDetailActivity.this, ViewDetailActivity.class);
                 intent.putExtra("id",productDetailId);
                 intent.putExtra("description",intentDescription);
                 startActivity(intent);

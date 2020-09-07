@@ -9,7 +9,6 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -18,9 +17,8 @@ import com.andexert.library.RippleView;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.model.Product;
-import com.rebook.automart.ui.SliderWebActivity;
+import com.rebook.automart.activity.SliderWebActivity;
 import com.rebook.automart.util.Utils;
-import com.rebook.automart.widget.ZgToast;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;

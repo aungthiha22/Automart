@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.content.pm.PackageInfo;
@@ -24,7 +24,6 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-
 import com.facebook.login.LoginManager;
 import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
@@ -37,6 +36,11 @@ import com.google.android.gms.common.api.Status;
 import com.rebook.automart.R;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.sync.SyncPostService;
+import com.rebook.automart.fragment.GeneralListFragment;
+import com.rebook.automart.fragment.HomeFragment;
+import com.rebook.automart.fragment.ItemListFragment;
+import com.rebook.automart.fragment.ProfileFragment;
+import com.rebook.automart.fragment.ShoppingCardFragment;
 import com.rebook.automart.util.BadgeUtil;
 import com.rebook.automart.util.TinyDB;
 import com.rebook.automart.widget.ZgToast;
@@ -102,7 +106,7 @@ public class MainActivity extends AppCompatActivity
                     }
                     return true;
                case R.id.navigation_search:
-                    startActivity(new Intent(MainActivity.this,ActivitySearch.class));
+                    startActivity(new Intent(MainActivity.this, ActivitySearch.class));
                     finish();
                     overridePendingTransition(0,0);
                     return true;
@@ -260,7 +264,7 @@ public class MainActivity extends AppCompatActivity
 
         }
         else if (id == R.id.menu_about_us) {
-            startActivity(new Intent(MainActivity.this,AboutAsActivity.class));
+            startActivity(new Intent(MainActivity.this, AboutAsActivity.class));
             overridePendingTransition(R.anim.pull_in_right,R.anim.push_out_left);
             finish();
 
@@ -279,15 +283,15 @@ public class MainActivity extends AppCompatActivity
             });
 
             LoginManager.getInstance().logOut();
-            startActivity(new Intent(MainActivity.this,LoginActivity.class));
+            startActivity(new Intent(MainActivity.this, LoginActivity.class));
             this.finish();
 
         } else if (id == R.id.menu_blog) {
-            startActivity(new Intent(MainActivity.this,OurPartners.class));
+            startActivity(new Intent(MainActivity.this, OurPartners.class));
             overridePendingTransition(0,0);
 
         }else if (id == R.id.menu_contact_us){
-            startActivity(new Intent(MainActivity.this,ContactUs.class));
+            startActivity(new Intent(MainActivity.this, ContactUs.class));
             overridePendingTransition(0,0);
             finish();
         }

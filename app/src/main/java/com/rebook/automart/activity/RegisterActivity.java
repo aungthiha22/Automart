@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -15,7 +15,6 @@ import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.TinyDB;
-import com.google.android.gms.analytics.HitBuilders;
 import com.rebook.automart.widget.ZgToast;
 import com.squareup.okhttp.CertificatePinner;
 import com.squareup.okhttp.OkHttpClient;
@@ -141,7 +140,7 @@ public class RegisterActivity extends AppCompatActivity {
                                    zgToast.setZgText(jsonObject.get("message").getAsString());
                                }else {
                                    zgToast.setZgText("Confirm your email and then You can login with your email");
-                                   Intent intent = new Intent(RegisterActivity.this,LoginActivity.class);
+                                   Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
                                    startActivity(intent);
                                    finish();
                                }

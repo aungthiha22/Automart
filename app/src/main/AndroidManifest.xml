@@ -16,37 +16,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.MainActivity"
+        <activity android:name=".activity.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ui.SlideActivity"/>
-        <activity android:name=".ui.LoginActivity"/>
-        <activity android:name=".ui.RegisterActivity"/>
-        <activity android:name=".ui.ForgetPasswordActivity"/>
-        <activity android:name=".ui.AboutAsActivity"/>
-        <activity android:name=".ui.ActivitySearch"/>
+        <activity android:name=".activity.SlideActivity"/>
+        <activity android:name=".activity.LoginActivity"/>
+        <activity android:name=".activity.RegisterActivity"/>
+        <activity android:name=".activity.ForgetPasswordActivity"/>
+        <activity android:name=".activity.AboutAsActivity"/>
+        <activity android:name=".activity.ActivitySearch"/>
         <!--<activity android:name=".ui.MainActivity"/>-->
-        <activity android:name=".ui.SubCategoryActivity"/>
-        <activity android:name=".ui.ProductDetailActivity"/>
-        <activity android:name=".ui.ProductList"/>
-        <activity android:name=".ui.PromotionActivity"/>
-        <activity android:name=".ui.FitterListView"/>
-        <activity android:name=".ui.ContactUs"/>
-        <activity android:name=".ui.BlogDetailActivity"/>
-        <activity android:name=".ui.OrderListActivity"/>
-        <activity android:name=".ui.UserOrderActivity"/>
-        <activity android:name=".ui.BuyNowActivity"/>
-        <activity android:name=".ui.PromotionAndPayment"/>
-        <activity android:name=".ui.WebViewActivity"/>
-        <activity android:name=".ui.ViewDetailActivity"/>
-        <activity android:name=".ui.SliderWebActivity"/>
-        <activity android:name=".ui.OrderCancelActivity"/>
-        <activity android:name=".ui.SaveVehicle"/>
-        <activity android:name=".ui.OurPartners"/>
+        <activity android:name=".activity.SubCategoryActivity"/>
+        <activity android:name=".activity.ProductDetailActivity"/>
+        <activity android:name=".activity.ProductList"/>
+        <activity android:name=".activity.PromotionActivity"/>
+        <activity android:name=".activity.FitterListView"/>
+        <activity android:name=".activity.ContactUs"/>
+        <activity android:name=".activity.BlogDetailActivity"/>
+        <activity android:name=".activity.OrderListActivity"/>
+        <activity android:name=".activity.UserOrderActivity"/>
+        <activity android:name=".activity.BuyNowActivity"/>
+        <activity android:name=".activity.PromotionAndPayment"/>
+        <activity android:name=".activity.WebViewActivity"/>
+        <activity android:name=".activity.ViewDetailActivity"/>
+        <activity android:name=".activity.SliderWebActivity"/>
+        <activity android:name=".activity.OrderCancelActivity"/>
+        <activity android:name=".activity.SaveVehicle"/>
+        <activity android:name=".activity.OurPartners"/>
 
         <meta-data
             android:name="com.google.android.gms.version"

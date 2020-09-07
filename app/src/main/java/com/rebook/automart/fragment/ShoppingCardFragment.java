@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.fragment;
 
 import android.app.Activity;
 import android.content.Context;
@@ -29,7 +29,9 @@ import com.bumptech.glide.Glide;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.activity.MainActivity;
+import com.rebook.automart.activity.PromotionAndPayment;
 import com.rebook.automart.model.Product;
+import com.rebook.automart.sync.DeleteListener;
 import com.rebook.automart.util.Utils;
 import com.rebook.automart.widget.ZgToast;
 
@@ -43,7 +45,9 @@ import butterknife.ButterKnife;
  * Created by Dell on 2/18/2019.
  */
 
-public class ShoppingCardFragment extends Fragment {
+public class ShoppingCardFragment extends Fragment implements DeleteListener{
+
+    public static final String TAG = "ShoppingCardFragment" ;
 
     @BindView(R.id.add_to_cart_list)RecyclerView recyclerView;
     @BindView(R.id.emptyView)TextView emptyView;
@@ -98,7 +102,7 @@ public class ShoppingCardFragment extends Fragment {
         txtTotalAmt.setText(String.valueOf(itemPrice)+" MMK");
 
         linearLayoutManager=new LinearLayoutManager(getActivity());
-        cartAdapter = new CartAdapter(getActivity());
+        cartAdapter = new CartAdapter(getActivity(),this);
         recyclerView.setLayoutManager(linearLayoutManager);
         orderList = new ArrayList<>();
         orderList = getTableData();
@@ -117,7 +121,7 @@ public class ShoppingCardFragment extends Fragment {
                 Cursor intentCursor = db.rawQuery("select * from product where type = 0 and checkBox = 'yes'",null);
                 if (intentCursor.getCount()>0) {
                     // startActivity(new Intent(getActivity(), OrderListActivity.class));
-                    startActivity(new Intent(getActivity(),PromotionAndPayment.class));
+                    startActivity(new Intent(getActivity(), PromotionAndPayment.class));
                     getActivity().finish();
 
                 }else {
@@ -160,7 +164,19 @@ public class ShoppingCardFragment extends Fragment {
 
         return orderList;
     }
-public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+
+    @Override
+    public void deleteAddToCard(String idForDelete) {
+        db.execSQL("delete from product where id = '"+idForDelete+"' and type = 0 " );
+        orderList.clear();
+        orderList = getTableData();
+        Log.i(TAG , "orderList is : "+orderList.size());
+        cartAdapter.append(orderList);
+        recyclerView.setAdapter(cartAdapter);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+    }
+
+    public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static final int TYPE_LOADING=2;
     public static final int TYPE_ITEM=1;
     List<Product> posts=new ArrayList<>();
@@ -168,10 +184,12 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     String type;
     int width,height;
     boolean isShow;
+    DeleteListener deleteListener ;
 
 
-    public CartAdapter(Context context){
+    public CartAdapter(Context context , DeleteListener listener){
         this.context=context;
+        this.deleteListener = listener ;
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         height = displayMetrics.heightPixels;
@@ -342,13 +360,17 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
                 }
             });
-            ((ViewHolder) holder).imgDelete.setOnClickListener(new View.OnClickListener() {
+           /* ((ViewHolder) holder).imgDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    db.execSQL("delete from product where id = '"+posts.get(position).getId()+"' and type = 0 " );
-                    startActivity(new Intent(getActivity(), MainActivity.class));
-                    getActivity().finish();
+                    deleteAddToCard(posts.get(position).getId());
+                }
+            });*/
 
+            ((ViewHolder) holder).imageView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    deleteAddToCard(posts.get(position).getId());
                 }
             });
 

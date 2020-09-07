@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -40,7 +40,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Review;
 import com.rebook.automart.model.Shop;
 import com.rebook.automart.sync.SyncPostService;
@@ -329,7 +328,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
         forgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(LoginActivity.this,ForgetPasswordActivity.class));
+                startActivity(new Intent(LoginActivity.this, ForgetPasswordActivity.class));
                 finish();
             }
         });
@@ -476,7 +475,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(this,RegisterActivity.class));
+        startActivity(new Intent(this, RegisterActivity.class));
         finish();
     }
     @Override

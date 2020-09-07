@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
@@ -33,7 +33,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.model.Shop;
 import com.rebook.automart.sync.SyncPostService;
@@ -340,7 +339,7 @@ public class PromotionAndPayment extends AppCompatActivity {
                                     zgToast.setGravity(Gravity.CENTER, 0, 0);
                                     zgToast.setZgText("Your account is expired , Please logout and then login again");
                                     zgToast.show();
-                                    startActivity(new Intent(PromotionAndPayment.this,LoginActivity.class));
+                                    startActivity(new Intent(PromotionAndPayment.this, LoginActivity.class));
                                     finish();
                                 }
                             });
@@ -426,7 +425,7 @@ public class PromotionAndPayment extends AppCompatActivity {
 
                         Log.e(TAG,"payment method  : "+paymentMethod);
                         Log.e(TAG,"booking id : "+bookingId);
-                        Intent intent = new Intent(PromotionAndPayment.this,WebViewActivity.class);
+                        Intent intent = new Intent(PromotionAndPayment.this, WebViewActivity.class);
                         intent.putExtra("payment_method",paymentMethod);
                         intent.putExtra("encrypt_booking_id", bookingId);
                         startActivity(intent);

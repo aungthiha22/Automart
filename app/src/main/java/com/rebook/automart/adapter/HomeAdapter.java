@@ -20,14 +20,13 @@ import android.widget.ProgressBar;
 import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.model.Rating;
-import com.rebook.automart.ui.MainActivity;
-import com.rebook.automart.ui.ProductDetailActivity;
-import com.rebook.automart.ui.SubCategoryActivity;
+import com.rebook.automart.activity.ProductDetailActivity;
+import com.rebook.automart.activity.SubCategoryActivity;
 import com.rebook.automart.util.Utils;
 import com.andexert.library.RippleView;
 import com.bumptech.glide.Glide;

@@ -1,6 +1,5 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -14,18 +13,16 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.TinyDB;
-import com.rebook.automart.widget.ZawgyiTextView;
 import com.rebook.automart.widget.ZgToast;
 import com.squareup.okhttp.CertificatePinner;
 import com.squareup.okhttp.OkHttpClient;
-import java.util.ArrayList;
-import java.util.Arrays;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import retrofit.Callback;

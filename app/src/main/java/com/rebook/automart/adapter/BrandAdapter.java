@@ -14,8 +14,7 @@ import android.widget.TextView;
 
 import com.rebook.automart.R;
 import com.rebook.automart.model.PostAutoMart;
-import com.rebook.automart.ui.ProductList;
-import com.rebook.automart.ui.SubCategoryActivity;
+import com.rebook.automart.activity.ProductList;
 import com.rebook.automart.widget.ZgToast;
 
 import java.util.ArrayList;

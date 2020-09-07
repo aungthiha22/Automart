@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.fragment;
 
 import android.content.Intent;
 import android.graphics.drawable.Drawable;
@@ -12,9 +12,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.andexert.library.RippleView;
+
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.UserOrderActivity;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.TinyDB;
 import com.squareup.okhttp.CertificatePinner;
@@ -82,7 +83,7 @@ public class ProfileFragment extends Fragment {
         txtProfileName.setText(tinyDB.getString(Config.STORE_NAME));
         txtProfileEmail.setText(tinyDB.getString(Config.STORE_EMAIL));
 
-        final Intent intent = new Intent(getActivity(),UserOrderActivity.class);
+        final Intent intent = new Intent(getActivity(), UserOrderActivity.class);
         pendingCardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

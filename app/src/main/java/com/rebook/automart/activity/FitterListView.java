@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.content.Intent;
 import android.database.Cursor;
@@ -20,7 +20,6 @@ import android.widget.TextView;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.ProductSearchPageAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.model.Product;
@@ -105,7 +104,7 @@ public class FitterListView extends AppCompatActivity {
                     zgToast.setZgText(getResources().getString(R.string.save_vehicle));
                     zgToast.setError();
                     zgToast.show();
-                    Intent intent = new Intent(FitterListView.this,SaveVehicle.class);
+                    Intent intent = new Intent(FitterListView.this, SaveVehicle.class);
                     //intent.putExtra("vehicle","select");
                     startActivity(intent);
                 }

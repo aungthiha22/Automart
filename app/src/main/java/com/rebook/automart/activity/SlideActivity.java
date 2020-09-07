@@ -1,4 +1,4 @@
-package com.rebook.automart.ui;
+package com.rebook.automart.activity;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -38,7 +38,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
-import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.ViewPagerAdapter;
 import com.rebook.automart.model.Review;
 import com.rebook.automart.sync.SyncPostService;
@@ -278,7 +277,7 @@ public class SlideActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(View v) {
               //  Toast.makeText(SlideActivity.this, "this is sign in", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SlideActivity.this,LoginActivity.class);
+                Intent intent = new Intent(SlideActivity.this, LoginActivity.class);
                 finish();
                 startActivity(intent);
             }
@@ -287,7 +286,7 @@ public class SlideActivity extends AppCompatActivity implements GoogleApiClient.
             @Override
             public void onClick(View v) {
                 //Toast.makeText(SlideActivity.this, "this is sign up", Toast.LENGTH_SHORT).show();
-                Intent intent = new Intent(SlideActivity.this,RegisterActivity.class);
+                Intent intent = new Intent(SlideActivity.this, RegisterActivity.class);
                 finish();
                 startActivity(intent);
             }
