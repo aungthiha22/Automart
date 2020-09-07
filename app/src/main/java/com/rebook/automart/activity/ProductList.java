@@ -15,11 +15,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.HomeAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.model.Product;
@@ -229,7 +229,7 @@ public class ProductList extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(ProductList.this,MainActivity.class));
+        startActivity(new Intent(ProductList.this, MainActivity.class));
         finish();
     }
 

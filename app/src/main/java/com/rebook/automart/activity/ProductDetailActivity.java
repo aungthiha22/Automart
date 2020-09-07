@@ -31,11 +31,11 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.HomeAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
 import com.rebook.automart.model.Product;
@@ -47,7 +47,6 @@ import com.rebook.automart.widget.ZgToast;
 import com.daimajia.slider.library.Animations.DescriptionAnimation;
 import com.daimajia.slider.library.SliderLayout;
 import com.daimajia.slider.library.SliderTypes.DefaultSliderView;
-import com.google.android.gms.analytics.HitBuilders;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -573,7 +572,7 @@ public class ProductDetailActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(ProductDetailActivity.this,MainActivity.class));
+        startActivity(new Intent(ProductDetailActivity.this, MainActivity.class));
         finish();
     }
     protected boolean shouldAskPermissions() {

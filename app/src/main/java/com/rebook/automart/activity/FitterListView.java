@@ -17,19 +17,17 @@ import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.ProductSearchPageAdapter;
 import com.rebook.automart.listener.EndlessRecyclerViewScrollListener;
-import com.rebook.automart.model.Fit;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.NetService;
 import com.rebook.automart.util.TinyDB;
 import com.rebook.automart.widget.ZgToast;
-import com.google.android.gms.analytics.HitBuilders;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
@@ -273,7 +271,7 @@ public class FitterListView extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(FitterListView.this,MainActivity.class));
+        startActivity(new Intent(FitterListView.this, MainActivity.class));
         finish();
     }
 

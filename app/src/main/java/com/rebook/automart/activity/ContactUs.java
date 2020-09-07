@@ -18,6 +18,7 @@ import android.widget.Toast;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.widget.ZgToast;
 import com.squareup.okhttp.OkHttpClient;
@@ -155,7 +156,7 @@ public class ContactUs extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(ContactUs.this,MainActivity.class));
+        startActivity(new Intent(ContactUs.this, MainActivity.class));
         overridePendingTransition(0,0);
         finish();
     }

@@ -40,6 +40,7 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Review;
 import com.rebook.automart.model.Shop;
 import com.rebook.automart.sync.SyncPostService;
@@ -299,7 +300,7 @@ public class LoginActivity extends AppCompatActivity implements GoogleApiClient.
                                         if (checkBox.isChecked()) {
                                             tinyDB.putBoolean(Config.LOG_IN, true);
                                         }
-                                       startActivity(new Intent(LoginActivity.this,MainActivity.class));
+                                       startActivity(new Intent(LoginActivity.this, MainActivity.class));
                                        finish();
                                     }
                                     zgToast.show();

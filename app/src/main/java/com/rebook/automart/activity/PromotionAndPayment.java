@@ -1,11 +1,8 @@
 package com.rebook.automart.ui;
 
-import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.arch.lifecycle.OnLifecycleEvent;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.ConfigurationInfo;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -17,7 +14,6 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -30,13 +26,14 @@ import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
+
 import com.andexert.library.RippleView;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.model.Shop;
 import com.rebook.automart.sync.SyncPostService;
@@ -48,10 +45,8 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import butterknife.BindView;
-import butterknife.BindViews;
 import butterknife.ButterKnife;
 import retrofit.Callback;
 import retrofit.RestAdapter;
@@ -547,7 +542,7 @@ public class PromotionAndPayment extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
-                Intent intent = new Intent(PromotionAndPayment.this,MainActivity.class);
+                Intent intent = new Intent(PromotionAndPayment.this, MainActivity.class);
                 overridePendingTransition(0,0);
                 startActivity(intent);
                 finish();

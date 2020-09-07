@@ -19,6 +19,7 @@ import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.UiSettings;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.widget.ZawgyiTextView;
 import org.xml.sax.XMLReader;
 import butterknife.BindView;
@@ -123,7 +124,7 @@ public class AboutAsActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         super.onBackPressed();
-        startActivity(new Intent(AboutAsActivity.this,MainActivity.class));
+        startActivity(new Intent(AboutAsActivity.this, MainActivity.class));
         overridePendingTransition(R.anim.pull_in_left,R.anim.push_out_right);
         finish();
     }

@@ -38,8 +38,8 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.ViewPagerAdapter;
-import com.google.android.gms.analytics.HitBuilders;
 import com.rebook.automart.model.Review;
 import com.rebook.automart.sync.SyncPostService;
 import com.rebook.automart.util.NetService;
@@ -402,7 +402,7 @@ public class SlideActivity extends AppCompatActivity implements GoogleApiClient.
                             // Log.e("LoginActivity new ","_____"+list.get(0).getUpdatedAt());
                         }
 
-                        startActivity(new Intent(SlideActivity.this,MainActivity.class));
+                        startActivity(new Intent(SlideActivity.this, MainActivity.class));
                         finish();
 
                     }

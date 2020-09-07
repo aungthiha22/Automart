@@ -28,6 +28,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.util.Utils;
 import com.rebook.automart.widget.ZgToast;
@@ -345,7 +346,7 @@ public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 @Override
                 public void onClick(View v) {
                     db.execSQL("delete from product where id = '"+posts.get(position).getId()+"' and type = 0 " );
-                    startActivity(new Intent(getActivity(),MainActivity.class));
+                    startActivity(new Intent(getActivity(), MainActivity.class));
                     getActivity().finish();
 
                 }

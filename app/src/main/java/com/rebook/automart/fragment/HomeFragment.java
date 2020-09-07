@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -30,14 +29,12 @@ import android.widget.RatingBar;
 import android.widget.RelativeLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.bumptech.glide.util.Util;
 import com.google.gson.JsonObject;
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.adapter.HomeCategoryAdapter;
-import com.rebook.automart.adapter.HomeSlidePagerAdapter;
 import com.rebook.automart.adapter.TestingSlidePagerAdapter;
 import com.rebook.automart.model.Product;
 import com.rebook.automart.model.Rating;
@@ -824,7 +821,7 @@ public class HomeFragment extends Fragment {
                             Snackbar.make(rippleView, "You have been added shopping cart", Snackbar.LENGTH_LONG)
                                     .setAction("Action", null).show();
 
-                            startActivity(new Intent(getActivity(),MainActivity.class));
+                            startActivity(new Intent(getActivity(), MainActivity.class));
                             getActivity().finish();
                             //zgToast.show();
 

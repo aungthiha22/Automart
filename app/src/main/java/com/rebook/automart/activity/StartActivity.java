@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.rebook.automart.Config;
 import com.rebook.automart.R;
+import com.rebook.automart.activity.MainActivity;
 import com.rebook.automart.util.TinyDB;
 
 /**
@@ -48,7 +49,7 @@ public class StartActivity extends AppCompatActivity {
     }
     private void goSlider(){
         if (login){
-            startActivity(new Intent(this,MainActivity.class));
+            startActivity(new Intent(this, MainActivity.class));
             overridePendingTransition(0,0);
         }else {
             startActivity(new Intent(this, SlideActivity.class));
