@@ -27,6 +27,7 @@ import retrofit.client.Response;
 
 public class TestingActivity extends AppCompatActivity{
 
+    public static final String TAG = "TestingActivity";
     @BindView(R.id.testing_button)Button btnTesting;
 
     OkHttpClient okHttpClient;
@@ -57,6 +58,21 @@ public class TestingActivity extends AppCompatActivity{
         btnTesting.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.i(TAG,"Token is : "+tinyDB.getString(Config.STORE_TOKEN));
+                syncPostService.checkPromo(tinyDB.getString(Config.STORE_TOKEN), "Ypromo", "mpu", new Callback<JsonObject>() {
+                    @Override
+                    public void success(JsonObject jsonObject, Response response) {
+
+                       Log.i(TAG , "Success is : "+jsonObject.toString());
+                    }
+
+                    @Override
+                    public void failure(RetrofitError error) {
+                        Log.i(TAG , "Fail is : "+error.getMessage());
+                    }
+                });
+
+                /*
                 syncPostService.getSearchProduct("ball joint", "2001Suzuki Swift 1200 cc K12C ZC53S", 1,
                         new Callback<JsonObject>() {
                             @Override
@@ -79,6 +95,7 @@ public class TestingActivity extends AppCompatActivity{
                             }
                         });
 
+           */
             }
         });
 

@@ -45,7 +45,7 @@ import butterknife.ButterKnife;
  * Created by Dell on 2/18/2019.
  */
 
-public class ShoppingCardFragment extends Fragment implements DeleteListener{
+public class ShoppingCardFragment extends Fragment{
 
     public static final String TAG = "ShoppingCardFragment" ;
 
@@ -102,7 +102,7 @@ public class ShoppingCardFragment extends Fragment implements DeleteListener{
         txtTotalAmt.setText(String.valueOf(itemPrice)+" MMK");
 
         linearLayoutManager=new LinearLayoutManager(getActivity());
-        cartAdapter = new CartAdapter(getActivity(),this);
+        cartAdapter = new CartAdapter(getActivity());
         recyclerView.setLayoutManager(linearLayoutManager);
         orderList = new ArrayList<>();
         orderList = getTableData();
@@ -165,7 +165,7 @@ public class ShoppingCardFragment extends Fragment implements DeleteListener{
         return orderList;
     }
 
-    @Override
+   /* @Override
     public void deleteAddToCard(String idForDelete) {
         db.execSQL("delete from product where id = '"+idForDelete+"' and type = 0 " );
         orderList.clear();
@@ -174,7 +174,7 @@ public class ShoppingCardFragment extends Fragment implements DeleteListener{
         cartAdapter.append(orderList);
         recyclerView.setAdapter(cartAdapter);
         recyclerView.setItemAnimator(new DefaultItemAnimator());
-    }
+    }*/
 
     public class CartAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     public static final int TYPE_LOADING=2;
@@ -187,9 +187,9 @@ public class ShoppingCardFragment extends Fragment implements DeleteListener{
     DeleteListener deleteListener ;
 
 
-    public CartAdapter(Context context , DeleteListener listener){
+    public CartAdapter(Context context){
         this.context=context;
-        this.deleteListener = listener ;
+       // this.deleteListener = listener ;
         DisplayMetrics displayMetrics = new DisplayMetrics();
         ((Activity)context).getWindowManager().getDefaultDisplay().getMetrics(displayMetrics);
         height = displayMetrics.heightPixels;
@@ -360,19 +360,22 @@ public class ShoppingCardFragment extends Fragment implements DeleteListener{
 
                 }
             });
-           /* ((ViewHolder) holder).imgDelete.setOnClickListener(new View.OnClickListener() {
+           ((ViewHolder) holder).imgDelete.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    db.execSQL("delete from product where id = '"+posts.get(position).getId()+"' and type = 0 " );
+                    startActivity(new Intent(getActivity(),MainActivity.class));
+                    getActivity().finish();
+
+                }
+            });
+
+           /*  ((ViewHolder) holder).imageView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     deleteAddToCard(posts.get(position).getId());
                 }
             });*/
-
-            ((ViewHolder) holder).imageView.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    deleteAddToCard(posts.get(position).getId());
-                }
-            });
 
         }
     }

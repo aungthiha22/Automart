@@ -169,26 +169,32 @@ public class HomeFragment extends Fragment {
         syncPostService.getAdvertisementOne(new Callback<JsonObject>() {
             @Override
             public void success(JsonObject jsonObject, Response response) {
-                DisplayMetrics metrics = new DisplayMetrics();
-                getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                try {
 
-                float yInches= metrics.heightPixels/metrics.ydpi;
-                float xInches= metrics.widthPixels/metrics.xdpi;
-                double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
-                if (diagonalInches>=6.5) {
-                    // 6.5inch device or bigger
-                    Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+jsonObject.get("image").getAsString())
-                            .override(Utils.getPx(getActivity(),880),
-                                    Utils.getPx(getActivity(),280))
-                            .into(adsImageOne);
-                }else {
-                    Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+jsonObject.get("image").getAsString())
-                            .override(Utils.getPx(getActivity(),680),
-                                    Utils.getPx(getActivity(),180))
-                            .into(adsImageOne);
+                    DisplayMetrics metrics = new DisplayMetrics();
+                    getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+
+                    float yInches= metrics.heightPixels/metrics.ydpi;
+                    float xInches= metrics.widthPixels/metrics.xdpi;
+                    double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
+                    if (diagonalInches>=6.5) {
+                        // 6.5inch device or bigger
+                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+jsonObject.get("image").getAsString())
+                                .override(Utils.getPx(getActivity(),880),
+                                        Utils.getPx(getActivity(),280))
+                                .into(adsImageOne);
+                    }else {
+                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+jsonObject.get("image").getAsString())
+                                .override(Utils.getPx(getActivity(),680),
+                                        Utils.getPx(getActivity(),180))
+                                .into(adsImageOne);
+                    }
+
+                    goAdsOneUrl = jsonObject.get("product_url").getAsString();
+
+                }catch (Exception e){
+                    Log.i(TAG , "Error is : "+e.getMessage());
                 }
-
-                goAdsOneUrl = jsonObject.get("product_url").getAsString();
             }
 
             @Override
@@ -217,50 +223,55 @@ public class HomeFragment extends Fragment {
                         imageUrl4 = adsArray.get(3).getImage();
                         goAdsUrl4 = adsArray.get(3).getPruductUrl();
                     }
-                    DisplayMetrics metrics = new DisplayMetrics();
-                    getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
+                    try {
 
-                    float yInches= metrics.heightPixels/metrics.ydpi;
-                    float xInches= metrics.widthPixels/metrics.xdpi;
-                    double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
-                    if (diagonalInches>=6.5){
-                        // 6.5inch device or bigger
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl1)
-                                .override(Utils.getPx(getActivity(),680),
-                                        Utils.getPx(getActivity(),280))
-                                .into(adsImage1);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl2)
-                                .override(Utils.getPx(getActivity(),900),
-                                        Utils.getPx(getActivity(),280))
-                                .into(adsImage2);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl3)
-                                .override(Utils.getPx(getActivity(),900),
-                                        Utils.getPx(getActivity(),280))
-                                .into(adsImage3);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl4)
-                                .override(Utils.getPx(getActivity(),900),
-                                        Utils.getPx(getActivity(),280))
-                                .into(adsImage4);
+                        DisplayMetrics metrics = new DisplayMetrics();
+                        getActivity().getWindowManager().getDefaultDisplay().getMetrics(metrics);
 
-                    }else {
-                        // smaller device
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl1)
-                                .override(Utils.getPx(getActivity(),310),
-                                        Utils.getPx(getActivity(),180))
-                                .into(adsImage1);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl2)
-                                .override(Utils.getPx(getActivity(),500),
-                                        Utils.getPx(getActivity(),180))
-                                .into(adsImage2);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl3)
-                                .override(Utils.getPx(getActivity(),500),
-                                        Utils.getPx(getActivity(),180))
-                                .into(adsImage3);
-                        Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl4)
-                                .override(Utils.getPx(getActivity(),500),
-                                        Utils.getPx(getActivity(),180))
-                                .into(adsImage4);
+                        float yInches= metrics.heightPixels/metrics.ydpi;
+                        float xInches= metrics.widthPixels/metrics.xdpi;
+                        double diagonalInches = Math.sqrt(xInches*xInches + yInches*yInches);
+                        if (diagonalInches>=6.5){
+                            // 6.5inch device or bigger
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl1)
+                                    .override(Utils.getPx(getActivity(),680),
+                                            Utils.getPx(getActivity(),280))
+                                    .into(adsImage1);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl2)
+                                    .override(Utils.getPx(getActivity(),900),
+                                            Utils.getPx(getActivity(),280))
+                                    .into(adsImage2);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl3)
+                                    .override(Utils.getPx(getActivity(),900),
+                                            Utils.getPx(getActivity(),280))
+                                    .into(adsImage3);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl4)
+                                    .override(Utils.getPx(getActivity(),900),
+                                            Utils.getPx(getActivity(),280))
+                                    .into(adsImage4);
 
+                        }else {
+                            // smaller device
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl1)
+                                    .override(Utils.getPx(getActivity(),310),
+                                            Utils.getPx(getActivity(),180))
+                                    .into(adsImage1);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl2)
+                                    .override(Utils.getPx(getActivity(),500),
+                                            Utils.getPx(getActivity(),180))
+                                    .into(adsImage2);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl3)
+                                    .override(Utils.getPx(getActivity(),500),
+                                            Utils.getPx(getActivity(),180))
+                                    .into(adsImage3);
+                            Glide.with(getActivity()).load(Config.MAIN_URL+"storage/"+imageUrl4)
+                                    .override(Utils.getPx(getActivity(),500),
+                                            Utils.getPx(getActivity(),180))
+                                    .into(adsImage4);
+
+                        }
+                    }catch (Exception e){
+                        Log.i(TAG , "error is : "+e.getMessage());
                     }
                 }
             }
