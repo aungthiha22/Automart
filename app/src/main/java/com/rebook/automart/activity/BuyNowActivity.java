@@ -272,7 +272,7 @@ public class BuyNowActivity extends AppCompatActivity {
                                             txtTotalAmount.setText(totalAmount + "\tMMK");
                                             amountWithTax = (totalAmount * 5) / 100;
                                            // txtAmtWithTax.setText(amountWithTax + "\tMMK");
-                                            lastAmount = totalAmount - promoAmount + amountWithTax;
+                                            lastAmount = totalAmount - promoAmount ;
                                             txtFinalValue.setText(lastAmount + "\tMMK");
                                         }else if (promoType.equals("Percent")){
                                             lblPromo.setText("Promo\t("+promoAmount+"%)");
@@ -282,7 +282,7 @@ public class BuyNowActivity extends AppCompatActivity {
                                             txtTotalAmount.setText(totalAmount + "\tMMK");
                                             amountWithTax = (totalAmount * 5) / 100;
                                           //  txtAmtWithTax.setText(amountWithTax + "\tMMK");
-                                            lastAmount = totalAmount - promoAmount + amountWithTax;
+                                            lastAmount = totalAmount - promoAmount ;
                                             txtFinalValue.setText(lastAmount + "\tMMK");
                                         }
                                     }
